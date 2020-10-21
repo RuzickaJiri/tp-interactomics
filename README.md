@@ -36,12 +36,12 @@ Par exemple, les 100 premières interactions protéine-protéine humaines dispon
 
 Numero de champ | Signification Biologique|
  --- | --- 
-1 | 
-2 |
-3 |
-4 |
-5 |
-6 |
+1 | Unique identifier for interactor A
+2 | Unique identifier for interactor B
+3 | Alternative identifier for interactor A
+4 | Alternative identifier for interactor B
+5 | Aliases for A
+6 | Aliases for B
 
 ##### Utiliser le PMID de la publication pour récuperer les lignes MITAB des interactions rapportées dans l'étude.
 Une librairie pratique pour manipuler des requêtes HTTP est [requests](https://requests.readthedocs.io/en/master/), eg:
@@ -60,7 +60,7 @@ ans = httpReq.text
 ##### Quelles techniques experimentales mesurent les interactions rapportées dans cette publication?
 
 ```
-
+psi-mi:"MI:0397"(two hybrid array)
 ```
 
 ##### Proposer deux expressions régulières et les champs auxquels les appliquer pour
@@ -86,13 +86,13 @@ ans = httpReq.text
 ##### Combien de protéines EBV sont impliquées et pour combien d'interactions EBV/EBV?
 
 ```
-
+59 interactions 
 ```
 
 ##### Combien de protéines humaines sont impliquées et pour combien d'interactions EBV/Human?
 
 ```
-
+169 interactions
 ```
 
 ###### Pour la suite du travail assurez-vous d'avoir les deux jeux de données MITAB suivants
